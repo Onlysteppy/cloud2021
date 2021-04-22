@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="Maven: com.cry:cloud-api-common:1.0-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../BaiduNetdiskDownload/博学谷闪聚支付/day01-项目介绍 Nacos Spring Cloud Alibaba/资料/本地仓库/com/cry/cloud-api-common/1.0-SNAPSHOT/cloud-api-common-1.0-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../cloud2021/cloud-api-common/cloud-api-common-1.0-SNAPSHOT-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../BaiduNetdiskDownload/博学谷闪聚支付/day01-项目介绍 Nacos Spring Cloud Alibaba/资料/本地仓库/com/cry/cloud-api-common/1.0-SNAPSHOT/cloud-api-common-1.0-SNAPSHOT-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../cloud2021/cloud-api-common/cloud-api-common-1.0-SNAPSHOT-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../BaiduNetdiskDownload/博学谷闪聚支付/day01-项目介绍 Nacos Spring Cloud Alibaba/资料/本地仓库/com/cry/cloud-api-common/1.0-SNAPSHOT/cloud-api-common-1.0-SNAPSHOT-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

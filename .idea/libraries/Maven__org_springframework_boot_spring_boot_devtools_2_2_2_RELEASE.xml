@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.boot:spring-boot-devtools:2.2.2.RELEASE">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../BaiduNetdiskDownload/博学谷闪聚支付/day01-项目介绍 Nacos Spring Cloud Alibaba/资料/本地仓库/org/springframework/boot/spring-boot-devtools/2.2.2.RELEASE/spring-boot-devtools-2.2.2.RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../BaiduNetdiskDownload/博学谷闪聚支付/day01-项目介绍 Nacos Spring Cloud Alibaba/资料/本地仓库/org/springframework/boot/spring-boot-devtools/2.2.2.RELEASE/spring-boot-devtools-2.2.2.RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../BaiduNetdiskDownload/博学谷闪聚支付/day01-项目介绍 Nacos Spring Cloud Alibaba/资料/本地仓库/org/springframework/boot/spring-boot-devtools/2.2.2.RELEASE/spring-boot-devtools-2.2.2.RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

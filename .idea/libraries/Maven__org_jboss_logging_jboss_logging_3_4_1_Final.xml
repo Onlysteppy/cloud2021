@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.jboss.logging:jboss-logging:3.4.1.Final">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../BaiduNetdiskDownload/博学谷闪聚支付/day01-项目介绍 Nacos Spring Cloud Alibaba/资料/本地仓库/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../BaiduNetdiskDownload/博学谷闪聚支付/day01-项目介绍 Nacos Spring Cloud Alibaba/资料/本地仓库/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../BaiduNetdiskDownload/博学谷闪聚支付/day01-项目介绍 Nacos Spring Cloud Alibaba/资料/本地仓库/org/jboss/logging/jboss-logging/3.4.1.Final/jboss-logging-3.4.1.Final-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
