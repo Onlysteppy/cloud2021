@@ -1,0 +1,540 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (allocation.cpp:273), pid=18372, tid=20944
+#
+# JRE version: Java(TM) SE Runtime Environment (8.0_40-b25) (build 1.8.0_40-b25)
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.40-b25 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000000001a8fb000):  JavaThread "restartedMain" [_thread_in_vm, id=20944, stack(0x000000001afd0000,0x000000001b0d0000)]
+
+Stack: [0x000000001afd0000,0x000000001b0d0000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x32b47a]
+V  [jvm.dll+0x2797f3]
+V  [jvm.dll+0x27a489]
+V  [jvm.dll+0x2717a5]
+V  [jvm.dll+0xcb7c4]
+V  [jvm.dll+0xcb9e7]
+V  [jvm.dll+0xcbe6c]
+V  [jvm.dll+0x63dab]
+V  [jvm.dll+0x651e8]
+V  [jvm.dll+0x5d9b9]
+V  [jvm.dll+0x7ad8d]
+V  [jvm.dll+0x1e6c34]
+V  [jvm.dll+0x1e6dbf]
+C  0x00000000032e44ba
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+J 2159  sun.misc.Unsafe.defineAnonymousClass(Ljava/lang/Class;[B[Ljava/lang/Object;)Ljava/lang/Class; (0 bytes) @ 0x00000000032e443c [0x00000000032e43c0+0x7c]
+j  java.lang.invoke.InnerClassLambdaMetafactory.spinInnerClass()Ljava/lang/Class;+493
+J 3622 C1 java.lang.invoke.InnerClassLambdaMetafactory.buildCallSite()Ljava/lang/invoke/CallSite; (156 bytes) @ 0x0000000003820b2c [0x0000000003820aa0+0x8c]
+J 2275 C1 java.lang.invoke.LambdaMetafactory.metafactory(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodType;Ljava/lang/invoke/MethodHandle;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; (35 bytes) @ 0x000000000335f7b4 [0x000000000335f5e0+0x1d4]
+J 2267 C1 java.lang.invoke.LambdaForm$DMH.invokeStatic_L6_L(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; (24 bytes) @ 0x000000000335696c [0x0000000003356560+0x40c]
+J 2274 C1 java.lang.invoke.LambdaForm$BMH.reinvoke(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object; (83 bytes) @ 0x000000000335c064 [0x000000000335b480+0xbe4]
+J 2214 C1 java.lang.invoke.CallSite.makeSite(Ljava/lang/invoke/MethodHandle;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/Object;Ljava/lang/Class;)Ljava/lang/invoke/CallSite; (457 bytes) @ 0x000000000331d00c [0x000000000331a700+0x290c]
+J 2213 C1 java.lang.invoke.MethodHandleNatives.linkCallSiteImpl(Ljava/lang/Class;Ljava/lang/invoke/MethodHandle;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/invoke/MemberName; (44 bytes) @ 0x0000000003319614 [0x00000000033195a0+0x74]
+J 2212 C1 java.lang.invoke.MethodHandleNatives.linkCallSite(Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/invoke/MemberName; (65 bytes) @ 0x0000000003319054 [0x0000000003318bc0+0x494]
+v  ~StubRoutines::call_stub
+j  org.hibernate.validator.internal.metadata.core.ConstraintHelper.findValidatorDescriptors(Ljava/lang/Class;Ljavax/validation/constraintvalidation/ValidationTarget;)Ljava/util/List;+12
+j  org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl.<init>(Lorg/hibernate/validator/internal/metadata/core/ConstraintHelper;Ljava/lang/reflect/Member;Lorg/hibernate/validator/internal/util/annotation/ConstraintAnnotationDescriptor;Ljava/lang/annotation/ElementType;Ljava/lang/Class;Lorg/hibernate/validator/internal/metadata/core/ConstraintOrigin;Lorg/hibernate/validator/internal/metadata/descriptor/ConstraintDescriptorImpl$ConstraintType;)V+130
+j  org.hibernate.validator.internal.metadata.descriptor.ConstraintDescriptorImpl.<init>(Lorg/hibernate/validator/internal/metadata/core/ConstraintHelper;Ljava/lang/reflect/Member;Lorg/hibernate/validator/internal/util/annotation/ConstraintAnnotationDescriptor;Ljava/lang/annotation/ElementType;)V+11
+j  org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider.buildConstraintDescriptor(Ljava/lang/reflect/Member;Ljava/lang/annotation/Annotation;Ljava/lang/annotation/ElementType;)Lorg/hibernate/validator/internal/metadata/descriptor/ConstraintDescriptorImpl;+18
+j  org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider.lambda$findConstraintAnnotations$0(Ljava/lang/reflect/Member;Ljava/lang/annotation/ElementType;Ljava/lang/annotation/Annotation;)Lorg/hibernate/validator/internal/metadata/descriptor/ConstraintDescriptorImpl;+4
+j  org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider$$Lambda$470.apply(Ljava/lang/Object;)Ljava/lang/Object;+16
+J 2148 C1 java.util.stream.ReferencePipeline$3$1.accept(Ljava/lang/Object;)V (23 bytes) @ 0x00000000032ddc14 [0x00000000032ddb00+0x114]
+j  java.util.ArrayList$ArrayListSpliterator.forEachRemaining(Ljava/util/function/Consumer;)V+99
+J 1596 C1 java.util.stream.AbstractPipeline.copyInto(Ljava/util/stream/Sink;Ljava/util/Spliterator;)V (53 bytes) @ 0x000000000316d8e4 [0x000000000316d400+0x4e4]
+J 1595 C1 java.util.stream.AbstractPipeline.wrapAndCopyInto(Ljava/util/stream/Sink;Ljava/util/Spliterator;)Ljava/util/stream/Sink; (18 bytes) @ 0x000000000316e2d4 [0x000000000316e0a0+0x234]
+J 2543 C1 java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Ljava/util/stream/PipelineHelper;Ljava/util/Spliterator;)Ljava/lang/Object; (18 bytes) @ 0x0000000003456f5c [0x0000000003456da0+0x1bc]
+J 1594 C1 java.util.stream.AbstractPipeline.evaluate(Ljava/util/stream/TerminalOp;)Ljava/lang/Object; (94 bytes) @ 0x00000000031696dc [0x0000000003169200+0x4dc]
+J 2449 C1 java.util.stream.ReferencePipeline.collect(Ljava/util/stream/Collector;)Ljava/lang/Object; (124 bytes) @ 0x00000000033f69d4 [0x00000000033f62e0+0x6f4]
+j  org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider.findConstraintAnnotations(Ljava/lang/reflect/Member;Ljava/lang/annotation/Annotation;Ljava/lang/annotation/ElementType;)Ljava/util/List;+108
+j  org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider.findConstraints(Ljava/lang/reflect/Member;Ljava/lang/annotation/ElementType;)Ljava/util/List;+41
+j  org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider.findPropertyMetaData(Ljava/lang/reflect/Field;)Lorg/hibernate/validator/internal/metadata/raw/ConstrainedField;+6
+j  org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider.getFieldMetaData(Ljava/lang/Class;)Ljava/util/Set;+76
+j  org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider.retrieveBeanConfiguration(Ljava/lang/Class;)Lorg/hibernate/validator/internal/metadata/raw/BeanConfiguration;+2
+j  org.hibernate.validator.internal.metadata.provider.AnnotationMetaDataProvider.getBeanConfiguration(Ljava/lang/Class;)Lorg/hibernate/validator/internal/metadata/raw/BeanConfiguration;+16
+j  org.hibernate.validator.internal.metadata.BeanMetaDataManager.getBeanConfigurationForHierarchy(Lorg/hibernate/validator/internal/metadata/provider/MetaDataProvider;Ljava/lang/Class;)Ljava/util/List;+44
+j  org.hibernate.validator.internal.metadata.BeanMetaDataManager.createBeanMetaData(Ljava/lang/Class;)Lorg/hibernate/validator/internal/metadata/aggregated/BeanMetaDataImpl;+67
+j  org.hibernate.validator.internal.metadata.BeanMetaDataManager.getBeanMetaData(Ljava/lang/Class;)Lorg/hibernate/validator/internal/metadata/aggregated/BeanMetaData;+32
+j  org.hibernate.validator.internal.engine.ValidatorImpl.validate(Ljava/lang/Object;[Ljava/lang/Class;)Ljava/util/Set;+27
+j  org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(Ljava/lang/Object;Lorg/springframework/validation/Errors;)V+17
+j  org.springframework.boot.context.properties.ConfigurationPropertiesJsr303Validator.validate(Ljava/lang/Object;Lorg/springframework/validation/Errors;)V+6
+j  org.springframework.boot.context.properties.bind.validation.ValidationBindHandler.validateAndPush(Lorg/springframework/boot/context/properties/source/ConfigurationPropertyName;Ljava/lang/Object;Ljava/lang/Class;)V+69
+j  org.springframework.boot.context.properties.bind.validation.ValidationBindHandler.validate(Lorg/springframework/boot/context/properties/source/ConfigurationPropertyName;Lorg/springframework/boot/context/properties/bind/Bindable;Lorg/springframework/boot/context/properties/bind/BindContext;Ljava/lang/Object;)V+30
+j  org.springframework.boot.context.properties.bind.validation.ValidationBindHandler.onFinish(Lorg/springframework/boot/context/properties/source/ConfigurationPropertyName;Lorg/springframework/boot/context/properties/bind/Bindable;Lorg/springframework/boot/context/properties/bind/BindContext;Ljava/lang/Object;)V+6
+j  org.springframework.boot.context.properties.bind.Binder.handleBindResult(Lorg/springframework/boot/context/properties/source/ConfigurationPropertyName;Lorg/springframework/boot/context/properties/bind/Bindable;Lorg/springframework/boot/context/properties/bind/BindHandler;Lorg/springframework/boot/context/properties/bind/Binder$Context;Ljava/lang/Object;Z)Ljava/lang/Object;+104
+j  org.springframework.boot.context.properties.bind.Binder.bind(Lorg/springframework/boot/context/properties/source/ConfigurationPropertyName;Lorg/springframework/boot/context/properties/bind/Bindable;Lorg/springframework/boot/context/properties/bind/BindHandler;Lorg/springframework/boot/context/properties/bind/Binder$Context;ZZ)Ljava/lang/Object;+61
+j  org.springframework.boot.context.properties.bind.Binder.bind(Lorg/springframework/boot/context/properties/source/ConfigurationPropertyName;Lorg/springframework/boot/context/properties/bind/Bindable;Lorg/springframework/boot/context/properties/bind/BindHandler;Z)Ljava/lang/Object;+44
+j  org.springframework.boot.context.properties.bind.Binder.bind(Lorg/springframework/boot/context/properties/source/ConfigurationPropertyName;Lorg/springframework/boot/context/properties/bind/Bindable;Lorg/springframework/boot/context/properties/bind/BindHandler;)Lorg/springframework/boot/context/properties/bind/BindResult;+5
+j  org.springframework.boot.context.properties.bind.Binder.bind(Ljava/lang/String;Lorg/springframework/boot/context/properties/bind/Bindable;Lorg/springframework/boot/context/properties/bind/BindHandler;)Lorg/springframework/boot/context/properties/bind/BindResult;+7
+j  org.springframework.boot.context.properties.ConfigurationPropertiesBinder.bind(Lorg/springframework/boot/context/properties/ConfigurationPropertiesBean;)Lorg/springframework/boot/context/properties/bind/BindResult;+31
+j  org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.bind(Lorg/springframework/boot/context/properties/ConfigurationPropertiesBean;)V+66
+j  org.springframework.boot.context.properties.ConfigurationPropertiesBindingPostProcessor.postProcessBeforeInitialization(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;+10
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(Ljava/lang/Object;Ljava/lang/String;)Ljava/lang/Object;+39
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(Ljava/lang/String;Ljava/lang/Object;Lorg/springframework/beans/factory/support/RootBeanDefinition;)Ljava/lang/Object;+49
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+245
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+169
+j  org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+4
+j  org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$165.getObject()Ljava/lang/Object;+16
+j  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(Ljava/lang/String;Lorg/springframework/beans/factory/ObjectFactory;)Ljava/lang/Object;+132
+J 2674 C1 org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Object;Z)Ljava/lang/Object; (833 bytes) @ 0x00000000034cfe0c [0x00000000034ce0c0+0x1d4c]
+j  org.springframework.beans.factory.support.AbstractBeanFactory.getBean(Ljava/lang/String;)Ljava/lang/Object;+5
+j  org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(Ljava/lang/String;Ljava/lang/Class;Lorg/springframework/beans/factory/BeanFactory;)Ljava/lang/Object;+2
+j  org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(Lorg/springframework/beans/factory/config/DependencyDescriptor;Ljava/lang/String;Ljava/util/Set;Lorg/springframework/beans/TypeConverter;)Ljava/lang/Object;+440
+j  org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(Lorg/springframework/beans/factory/config/DependencyDescriptor;Ljava/lang/String;Ljava/util/Set;Lorg/springframework/beans/TypeConverter;)Ljava/lang/Object;+108
+j  org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(Lorg/springframework/core/MethodParameter;Ljava/lang/String;Ljava/util/Set;Lorg/springframework/beans/TypeConverter;Z)Ljava/lang/Object;+79
+j  org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;Lorg/springframework/beans/factory/config/ConstructorArgumentValues;Lorg/springframework/beans/BeanWrapper;[Ljava/lang/Class;[Ljava/lang/String;Ljava/lang/reflect/Executable;ZZ)Lorg/springframework/beans/factory/support/ConstructorResolver$ArgumentsHolder;+434
+j  org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+727
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+11
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+101
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+34
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+169
+j  org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+4
+j  org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$165.getObject()Ljava/lang/Object;+16
+j  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(Ljava/lang/String;Lorg/springframework/beans/factory/ObjectFactory;)Ljava/lang/Object;+132
+J 2674 C1 org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Object;Z)Ljava/lang/Object; (833 bytes) @ 0x00000000034cfe0c [0x00000000034ce0c0+0x1d4c]
+j  org.springframework.beans.factory.support.AbstractBeanFactory.getBean(Ljava/lang/String;)Ljava/lang/Object;+5
+j  org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(Ljava/lang/String;Ljava/lang/Class;Lorg/springframework/beans/factory/BeanFactory;)Ljava/lang/Object;+2
+j  org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(Lorg/springframework/beans/factory/config/DependencyDescriptor;Ljava/lang/String;Ljava/util/Set;Lorg/springframework/beans/TypeConverter;)Ljava/lang/Object;+440
+j  org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(Lorg/springframework/beans/factory/config/DependencyDescriptor;Ljava/lang/String;Ljava/util/Set;Lorg/springframework/beans/TypeConverter;)Ljava/lang/Object;+108
+j  org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(Lorg/springframework/core/MethodParameter;Ljava/lang/String;Ljava/util/Set;Lorg/springframework/beans/TypeConverter;Z)Ljava/lang/Object;+79
+j  org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;Lorg/springframework/beans/factory/config/ConstructorArgumentValues;Lorg/springframework/beans/BeanWrapper;[Ljava/lang/Class;[Ljava/lang/String;Ljava/lang/reflect/Executable;ZZ)Lorg/springframework/beans/factory/support/ConstructorResolver$ArgumentsHolder;+434
+j  org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+727
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+11
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+101
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+34
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+169
+j  org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+4
+j  org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$165.getObject()Ljava/lang/Object;+16
+j  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(Ljava/lang/String;Lorg/springframework/beans/factory/ObjectFactory;)Ljava/lang/Object;+132
+J 2674 C1 org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Object;Z)Ljava/lang/Object; (833 bytes) @ 0x00000000034cfe0c [0x00000000034ce0c0+0x1d4c]
+j  org.springframework.beans.factory.support.AbstractBeanFactory.getBean(Ljava/lang/String;)Ljava/lang/Object;+5
+j  org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(Ljava/lang/Class;ZZ)Ljava/util/Map;+50
+j  org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansOfType(Ljava/lang/Class;)Ljava/util/Map;+4
+j  org.springframework.context.support.AbstractApplicationContext.getBeansOfType(Ljava/lang/Class;)Ljava/util/Map;+9
+j  org.springframework.boot.actuate.autoconfigure.health.HealthEndpointConfiguration.healthContributorRegistry(Lorg/springframework/context/ApplicationContext;Lorg/springframework/boot/actuate/health/HealthEndpointGroups;)Lorg/springframework/boot/actuate/health/HealthContributorRegistry;+7
+v  ~StubRoutines::call_stub
+J 2155  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (0 bytes) @ 0x00000000032df97f [0x00000000032df900+0x7f]
+J 2154 C1 sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (104 bytes) @ 0x00000000032e0fa4 [0x00000000032dfe00+0x11a4]
+J 2345 C1 sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (10 bytes) @ 0x00000000033a2e84 [0x00000000033a2d80+0x104]
+J 2150 C1 java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (62 bytes) @ 0x00000000032de4a4 [0x00000000032de0c0+0x3e4]
+j  org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(Lorg/springframework/beans/factory/support/RootBeanDefinition;Ljava/lang/String;Lorg/springframework/beans/factory/BeanFactory;Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+50
+j  org.springframework.beans.factory.support.ConstructorResolver.instantiate(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+48
+j  org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+1519
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+11
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+101
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+34
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+169
+j  org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+4
+j  org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$165.getObject()Ljava/lang/Object;+16
+j  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(Ljava/lang/String;Lorg/springframework/beans/factory/ObjectFactory;)Ljava/lang/Object;+132
+J 2674 C1 org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Object;Z)Ljava/lang/Object; (833 bytes) @ 0x00000000034cfe0c [0x00000000034ce0c0+0x1d4c]
+j  org.springframework.beans.factory.support.AbstractBeanFactory.getBean(Ljava/lang/String;)Ljava/lang/Object;+5
+j  org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(Ljava/lang/String;Ljava/lang/Class;Lorg/springframework/beans/factory/BeanFactory;)Ljava/lang/Object;+2
+j  org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(Lorg/springframework/beans/factory/config/DependencyDescriptor;Ljava/lang/String;Ljava/util/Set;Lorg/springframework/beans/TypeConverter;)Ljava/lang/Object;+440
+j  org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(Lorg/springframework/beans/factory/config/DependencyDescriptor;Ljava/lang/String;Ljava/util/Set;Lorg/springframework/beans/TypeConverter;)Ljava/lang/Object;+108
+j  org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(Lorg/springframework/core/MethodParameter;Ljava/lang/String;Ljava/util/Set;Lorg/springframework/beans/TypeConverter;Z)Ljava/lang/Object;+79
+j  org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;Lorg/springframework/beans/factory/config/ConstructorArgumentValues;Lorg/springframework/beans/BeanWrapper;[Ljava/lang/Class;[Ljava/lang/String;Ljava/lang/reflect/Executable;ZZ)Lorg/springframework/beans/factory/support/ConstructorResolver$ArgumentsHolder;+434
+j  org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+727
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+11
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+101
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+34
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+169
+j  org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+4
+j  org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$165.getObject()Ljava/lang/Object;+16
+j  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(Ljava/lang/String;Lorg/springframework/beans/factory/ObjectFactory;)Ljava/lang/Object;+132
+J 2674 C1 org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Object;Z)Ljava/lang/Object; (833 bytes) @ 0x00000000034cfe0c [0x00000000034ce0c0+0x1d4c]
+j  org.springframework.beans.factory.support.AbstractBeanFactory.getBean(Ljava/lang/String;)Ljava/lang/Object;+5
+j  org.springframework.context.support.AbstractApplicationContext.getBean(Ljava/lang/String;)Ljava/lang/Object;+9
+j  org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.createEndpointBean(Ljava/lang/String;)Lorg/springframework/boot/actuate/endpoint/annotation/EndpointDiscoverer$EndpointBean;+5
+j  org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.createEndpointBeans()Ljava/util/Collection;+51
+j  org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.discoverEndpoints()Ljava/util/Collection;+1
+j  org.springframework.boot.actuate.endpoint.annotation.EndpointDiscoverer.getEndpoints()Ljava/util/Collection;+9
+j  org.springframework.boot.actuate.autoconfigure.endpoint.web.ServletEndpointManagementContextConfiguration$WebMvcServletEndpointManagementContextConfiguration.servletEndpointRegistrar(Lorg/springframework/boot/actuate/autoconfigure/endpoint/web/WebEndpointProperties;Lorg/springframework/boot/actuate/endpoint/web/annotation/ServletEndpointsSupplier;Lorg/springframework/boot/autoconfigure/web/servlet/DispatcherServletPath;)Lorg/springframework/boot/actuate/endpoint/web/ServletEndpointRegistrar;+15
+v  ~StubRoutines::call_stub
+J 2155  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (0 bytes) @ 0x00000000032df97f [0x00000000032df900+0x7f]
+J 2154 C1 sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (104 bytes) @ 0x00000000032e0fa4 [0x00000000032dfe00+0x11a4]
+J 2345 C1 sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (10 bytes) @ 0x00000000033a2e84 [0x00000000033a2d80+0x104]
+J 2150 C1 java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object; (62 bytes) @ 0x00000000032de4a4 [0x00000000032de0c0+0x3e4]
+j  org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(Lorg/springframework/beans/factory/support/RootBeanDefinition;Ljava/lang/String;Lorg/springframework/beans/factory/BeanFactory;Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+50
+j  org.springframework.beans.factory.support.ConstructorResolver.instantiate(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;Ljava/lang/Object;Ljava/lang/reflect/Method;[Ljava/lang/Object;)Ljava/lang/Object;+48
+j  org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+1519
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+11
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Lorg/springframework/beans/BeanWrapper;+101
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+34
+j  org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+169
+j  org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(Ljava/lang/String;Lorg/springframework/beans/factory/support/RootBeanDefinition;[Ljava/lang/Object;)Ljava/lang/Object;+4
+j  org.springframework.beans.factory.support.AbstractBeanFactory$$Lambda$165.getObject()Ljava/lang/Object;+16
+j  org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(Ljava/lang/String;Lorg/springframework/beans/factory/ObjectFactory;)Ljava/lang/Object;+132
+J 2674 C1 org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(Ljava/lang/String;Ljava/lang/Class;[Ljava/lang/Object;Z)Ljava/lang/Object; (833 bytes) @ 0x00000000034cfe0c [0x00000000034ce0c0+0x1d4c]
+J 2725 C1 org.springframework.beans.factory.support.AbstractBeanFactory.getBean(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object; (9 bytes) @ 0x00000000034f8144 [0x00000000034f8040+0x104]
+j  org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(Lorg/springframework/beans/factory/ListableBeanFactory;Ljava/lang/Class;Ljava/util/Set;)Ljava/util/List;+69
+j  org.springframework.boot.web.servlet.ServletContextInitializerBeans.getOrderedBeansOfType(Lorg/springframework/beans/factory/ListableBeanFactory;Ljava/lang/Class;)Ljava/util/List;+6
+j  org.springframework.boot.web.servlet.ServletContextInitializerBeans.addServletContextInitializerBeans(Lorg/springframework/beans/factory/ListableBeanFactory;)V+32
+j  org.springframework.boot.web.servlet.ServletContextInitializerBeans.<init>(Lorg/springframework/beans/factory/ListableBeanFactory;[Ljava/lang/Class;)V+49
+j  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.getServletContextInitializerBeans()Ljava/util/Collection;+12
+j  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.selfInitialize(Ljavax/servlet/ServletContext;)V+19
+j  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext$$Lambda$383.onStartup(Ljavax/servlet/ServletContext;)V+5
+j  org.springframework.boot.web.embedded.tomcat.TomcatStarter.onStartup(Ljava/util/Set;Ljavax/servlet/ServletContext;)V+28
+j  org.apache.catalina.core.StandardContext.startInternal()V+1061
+j  org.apache.catalina.util.LifecycleBase.start()V+210
+j  org.apache.catalina.core.ContainerBase$StartChild.call()Ljava/lang/Void;+4
+j  org.apache.catalina.core.ContainerBase$StartChild.call()Ljava/lang/Object;+1
+j  java.util.concurrent.FutureTask.run()V+42
+j  org.apache.tomcat.util.threads.InlineExecutorService.execute(Ljava/lang/Runnable;)V+38
+j  java.util.concurrent.AbstractExecutorService.submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;+20
+j  org.apache.catalina.core.ContainerBase.startInternal()V+93
+j  org.apache.catalina.core.StandardHost.startInternal()V+153
+j  org.apache.catalina.util.LifecycleBase.start()V+210
+j  org.apache.catalina.core.ContainerBase$StartChild.call()Ljava/lang/Void;+4
+j  org.apache.catalina.core.ContainerBase$StartChild.call()Ljava/lang/Object;+1
+j  java.util.concurrent.FutureTask.run()V+42
+j  org.apache.tomcat.util.threads.InlineExecutorService.execute(Ljava/lang/Runnable;)V+38
+j  java.util.concurrent.AbstractExecutorService.submit(Ljava/util/concurrent/Callable;)Ljava/util/concurrent/Future;+20
+j  org.apache.catalina.core.ContainerBase.startInternal()V+93
+j  org.apache.catalina.core.StandardEngine.startInternal()V+38
+j  org.apache.catalina.util.LifecycleBase.start()V+210
+j  org.apache.catalina.core.StandardService.startInternal()V+63
+j  org.apache.catalina.util.LifecycleBase.start()V+210
+j  org.apache.catalina.core.StandardServer.startInternal()V+45
+j  org.apache.catalina.util.LifecycleBase.start()V+210
+j  org.apache.catalina.startup.Tomcat.start()V+9
+j  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize()V+64
+j  org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(Lorg/apache/catalina/startup/Tomcat;Z)V+43
+j  org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(Lorg/apache/catalina/startup/Tomcat;)Lorg/springframework/boot/web/embedded/tomcat/TomcatWebServer;+17
+j  org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer([Lorg/springframework/boot/web/servlet/ServletContextInitializer;)Lorg/springframework/boot/web/server/WebServer;+165
+j  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer()V+36
+j  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh()V+5
+j  org.springframework.context.support.AbstractApplicationContext.refresh()V+45
+j  org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh()V+1
+j  org.springframework.boot.SpringApplication.refresh(Lorg/springframework/context/ApplicationContext;)V+10
+j  org.springframework.boot.SpringApplication.refreshContext(Lorg/springframework/context/ConfigurableApplicationContext;)V+2
+j  org.springframework.boot.SpringApplication.run([Ljava/lang/String;)Lorg/springframework/context/ConfigurableApplicationContext;+118
+j  org.springframework.boot.SpringApplication.run([Ljava/lang/Class;[Ljava/lang/String;)Lorg/springframework/context/ConfigurableApplicationContext;+9
+j  org.springframework.boot.SpringApplication.run(Ljava/lang/Class;[Ljava/lang/String;)Lorg/springframework/context/ConfigurableApplicationContext;+9
+j  com.cry.springcloud.PaymentMain8006.main([Ljava/lang/String;)V+6
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeMethodAccessorImpl.invoke0(Ljava/lang/reflect/Method;Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+100
+j  sun.reflect.DelegatingMethodAccessorImpl.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+6
+j  java.lang.reflect.Method.invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;+56
+j  org.springframework.boot.devtools.restart.RestartLauncher.run()V+41
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+=>0x000000001a8fb000 JavaThread "restartedMain" [_thread_in_vm, id=20944, stack(0x000000001afd0000,0x000000001b0d0000)]
+  0x000000001a8f9800 JavaThread "Thread-0" [_thread_blocked, id=16676, stack(0x000000001aed0000,0x000000001afd0000)]
+  0x00000000192c5000 JavaThread "Service Thread" daemon [_thread_blocked, id=1596, stack(0x0000000019d00000,0x0000000019e00000)]
+  0x000000001920b000 JavaThread "C1 CompilerThread2" daemon [_thread_in_native, id=33856, stack(0x0000000019c00000,0x0000000019d00000)]
+  0x00000000191f2800 JavaThread "C2 CompilerThread1" daemon [_thread_in_native, id=29048, stack(0x0000000019b00000,0x0000000019c00000)]
+  0x000000001919f000 JavaThread "C2 CompilerThread0" daemon [_thread_in_native, id=2856, stack(0x0000000019a00000,0x0000000019b00000)]
+  0x000000001919d000 JavaThread "Monitor Ctrl-Break" daemon [_thread_in_native, id=16172, stack(0x0000000019900000,0x0000000019a00000)]
+  0x00000000177a7800 JavaThread "Attach Listener" daemon [_thread_blocked, id=25424, stack(0x0000000019000000,0x0000000019100000)]
+  0x0000000018b43800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=30388, stack(0x0000000018f00000,0x0000000019000000)]
+  0x000000001775f000 JavaThread "Finalizer" daemon [_thread_blocked, id=34612, stack(0x0000000018a00000,0x0000000018b00000)]
+  0x0000000002a67800 JavaThread "Reference Handler" daemon [_thread_blocked, id=16788, stack(0x0000000018900000,0x0000000018a00000)]
+  0x0000000002973800 JavaThread "main" [_thread_blocked, id=20796, stack(0x0000000002870000,0x0000000002970000)]
+
+Other Threads:
+  0x0000000017757800 VMThread [stack: 0x0000000018800000,0x0000000018900000] [id=29188]
+  0x00000000192cc000 WatcherThread [stack: 0x0000000019e00000,0x0000000019f00000] [id=32944]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 236032K, used 33606K [0x00000000d5d80000, 0x00000000ead80000, 0x0000000100000000)
+  eden space 224256K, 14% used [0x00000000d5d80000,0x00000000d7e51a08,0x00000000e3880000)
+  from space 11776K, 0% used [0x00000000e3880000,0x00000000e3880000,0x00000000e4400000)
+  to   space 13312K, 0% used [0x00000000ea080000,0x00000000ea080000,0x00000000ead80000)
+ ParOldGen       total 80896K, used 16698K [0x0000000081800000, 0x0000000086700000, 0x00000000d5d80000)
+  object space 80896K, 20% used [0x0000000081800000,0x000000008284eb98,0x0000000086700000)
+ Metaspace       used 35523K, capacity 37452K, committed 37672K, reserved 1081344K
+  class space    used 4675K, capacity 5006K, committed 5040K, reserved 1048576K
+
+Card table byte_map: [0x0000000012000000,0x0000000012400000] byte_map_base: 0x0000000011bf4000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000069fd4040
+ Begin Bits: [0x0000000012ab0000, 0x0000000014a50000)
+ End Bits:   [0x0000000014a50000, 0x00000000169f0000)
+
+Polling page: 0x0000000000620000
+
+CodeCache: size=245760Kb used=12525Kb max_used=12624Kb free=233234Kb
+ bounds [0x0000000002c40000, 0x00000000038a0000, 0x0000000011c40000]
+ total_blobs=4084 nmethods=3668 adapters=328
+ compilation: enabled
+
+Compilation events (10 events):
+Event: 11.671 Thread 0x000000001920b000 nmethod 3955 0x0000000003101fd0 code [0x0000000003102200, 0x0000000003102db8]
+Event: 11.691 Thread 0x000000001920b000 3956       3       sun.reflect.annotation.TypeAnnotationParser::parseTypeAnnotations (90 bytes)
+Event: 11.692 Thread 0x000000001920b000 nmethod 3956 0x00000000030ffad0 code [0x00000000030ffd80, 0x0000000003101008]
+Event: 11.693 Thread 0x000000001920b000 3958       3       org.hibernate.validator.internal.metadata.aggregated.CascadingMetaDataBuilder::<init> (169 bytes)
+Event: 11.693 Thread 0x000000001920b000 nmethod 3958 0x00000000030fea90 code [0x00000000030feca0, 0x00000000030ff6a8]
+Event: 11.693 Thread 0x000000001920b000 3959       1       java.util.Spliterators$EmptySpliterator::characteristics (4 bytes)
+Event: 11.694 Thread 0x000000001920b000 nmethod 3959 0x00000000030fe7d0 code [0x00000000030fe920, 0x00000000030fea30]
+Event: 11.694 Thread 0x000000001920b000 3957       3       java.util.stream.Collectors::toList (26 bytes)
+Event: 11.694 Thread 0x000000001920b000 nmethod 3957 0x00000000030fd910 code [0x00000000030fdb00, 0x00000000030fe428]
+Event: 11.694 Thread 0x000000001920b000 3960       3       org.springframework.asm.ClassReader::readCode (5085 bytes)
+
+GC Heap History (10 events):
+Event: 4.394 GC heap before
+{Heap before GC invocations=7 (full 1):
+ PSYoungGen      total 142848K, used 7041K [0x00000000d5d80000, 0x00000000df280000, 0x0000000100000000)
+  eden space 133120K, 0% used [0x00000000d5d80000,0x00000000d5d80000,0x00000000ddf80000)
+  from space 9728K, 72% used [0x00000000de900000,0x00000000defe04a0,0x00000000df280000)
+  to   space 9728K, 0% used [0x00000000ddf80000,0x00000000ddf80000,0x00000000de900000)
+ ParOldGen       total 87552K, used 7287K [0x0000000081800000, 0x0000000086d80000, 0x00000000d5d80000)
+  object space 87552K, 8% used [0x0000000081800000,0x0000000081f1dd40,0x0000000086d80000)
+ Metaspace       used 20607K, capacity 21270K, committed 21296K, reserved 1067008K
+  class space    used 2653K, capacity 2848K, committed 2864K, reserved 1048576K
+Event: 4.426 GC heap after
+Heap after GC invocations=7 (full 1):
+ PSYoungGen      total 142848K, used 0K [0x00000000d5d80000, 0x00000000df280000, 0x0000000100000000)
+  eden space 133120K, 0% used [0x00000000d5d80000,0x00000000d5d80000,0x00000000ddf80000)
+  from space 9728K, 0% used [0x00000000de900000,0x00000000de900000,0x00000000df280000)
+  to   space 9728K, 0% used [0x00000000ddf80000,0x00000000ddf80000,0x00000000de900000)
+ ParOldGen       total 53760K, used 7080K [0x0000000081800000, 0x0000000084c80000, 0x00000000d5d80000)
+  object space 53760K, 13% used [0x0000000081800000,0x0000000081eea040,0x0000000084c80000)
+ Metaspace       used 20607K, capacity 21270K, committed 21296K, reserved 1067008K
+  class space    used 2653K, capacity 2848K, committed 2864K, reserved 1048576K
+}
+Event: 6.370 GC heap before
+{Heap before GC invocations=8 (full 1):
+ PSYoungGen      total 142848K, used 133120K [0x00000000d5d80000, 0x00000000df280000, 0x0000000100000000)
+  eden space 133120K, 100% used [0x00000000d5d80000,0x00000000ddf80000,0x00000000ddf80000)
+  from space 9728K, 0% used [0x00000000de900000,0x00000000de900000,0x00000000df280000)
+  to   space 9728K, 0% used [0x00000000ddf80000,0x00000000ddf80000,0x00000000de900000)
+ ParOldGen       total 53760K, used 7080K [0x0000000081800000, 0x0000000084c80000, 0x00000000d5d80000)
+  object space 53760K, 13% used [0x0000000081800000,0x0000000081eea040,0x0000000084c80000)
+ Metaspace       used 25177K, capacity 26264K, committed 26544K, reserved 1073152K
+  class space    used 3243K, capacity 3489K, committed 3504K, reserved 1048576K
+Event: 6.383 GC heap after
+Heap after GC invocations=8 (full 1):
+ PSYoungGen      total 142848K, used 7841K [0x00000000d5d80000, 0x00000000e4f80000, 0x0000000100000000)
+  eden space 133120K, 0% used [0x00000000d5d80000,0x00000000d5d80000,0x00000000ddf80000)
+  from space 9728K, 80% used [0x00000000ddf80000,0x00000000de728560,0x00000000de900000)
+  to   space 10240K, 0% used [0x00000000e4580000,0x00000000e4580000,0x00000000e4f80000)
+ ParOldGen       total 53760K, used 7088K [0x0000000081800000, 0x0000000084c80000, 0x00000000d5d80000)
+  object space 53760K, 13% used [0x0000000081800000,0x0000000081eec040,0x0000000084c80000)
+ Metaspace       used 25177K, capacity 26264K, committed 26544K, reserved 1073152K
+  class space    used 3243K, capacity 3489K, committed 3504K, reserved 1048576K
+}
+Event: 9.273 GC heap before
+{Heap before GC invocations=9 (full 1):
+ PSYoungGen      total 142848K, used 140961K [0x00000000d5d80000, 0x00000000e4f80000, 0x0000000100000000)
+  eden space 133120K, 100% used [0x00000000d5d80000,0x00000000ddf80000,0x00000000ddf80000)
+  from space 9728K, 80% used [0x00000000ddf80000,0x00000000de728560,0x00000000de900000)
+  to   space 10240K, 0% used [0x00000000e4580000,0x00000000e4580000,0x00000000e4f80000)
+ ParOldGen       total 53760K, used 7088K [0x0000000081800000, 0x0000000084c80000, 0x00000000d5d80000)
+  object space 53760K, 13% used [0x0000000081800000,0x0000000081eec040,0x0000000084c80000)
+ Metaspace       used 31264K, capacity 32886K, committed 33200K, reserved 1077248K
+  class space    used 4124K, capacity 4421K, committed 4528K, reserved 1048576K
+Event: 9.299 GC heap after
+Heap after GC invocations=9 (full 1):
+ PSYoungGen      total 233984K, used 10222K [0x00000000d5d80000, 0x00000000e4f80000, 0x0000000100000000)
+  eden space 223744K, 0% used [0x00000000d5d80000,0x00000000d5d80000,0x00000000e3800000)
+  from space 10240K, 99% used [0x00000000e4580000,0x00000000e4f7b9c0,0x00000000e4f80000)
+  to   space 11776K, 0% used [0x00000000e3880000,0x00000000e3880000,0x00000000e4400000)
+ ParOldGen       total 53760K, used 8666K [0x0000000081800000, 0x0000000084c80000, 0x00000000d5d80000)
+  object space 53760K, 16% used [0x0000000081800000,0x0000000082076858,0x0000000084c80000)
+ Metaspace       used 31264K, capacity 32886K, committed 33200K, reserved 1077248K
+  class space    used 4124K, capacity 4421K, committed 4528K, reserved 1048576K
+}
+Event: 10.530 GC heap before
+{Heap before GC invocations=10 (full 1):
+ PSYoungGen      total 233984K, used 92231K [0x00000000d5d80000, 0x00000000e4f80000, 0x0000000100000000)
+  eden space 223744K, 36% used [0x00000000d5d80000,0x00000000dad963e0,0x00000000e3800000)
+  from space 10240K, 99% used [0x00000000e4580000,0x00000000e4f7b9c0,0x00000000e4f80000)
+  to   space 11776K, 0% used [0x00000000e3880000,0x00000000e3880000,0x00000000e4400000)
+ ParOldGen       total 53760K, used 8666K [0x0000000081800000, 0x0000000084c80000, 0x00000000d5d80000)
+  object space 53760K, 16% used [0x0000000081800000,0x0000000082076858,0x0000000084c80000)
+ Metaspace       used 33699K, capacity 35410K, committed 35496K, reserved 1081344K
+  class space    used 4362K, capacity 4655K, committed 4656K, reserved 1048576K
+Event: 10.556 GC heap after
+Heap after GC invocations=10 (full 1):
+ PSYoungGen      total 236032K, used 11772K [0x00000000d5d80000, 0x00000000ead80000, 0x0000000100000000)
+  eden space 224256K, 0% used [0x00000000d5d80000,0x00000000d5d80000,0x00000000e3880000)
+  from space 11776K, 99% used [0x00000000e3880000,0x00000000e43ff150,0x00000000e4400000)
+  to   space 13312K, 0% used [0x00000000ea080000,0x00000000ea080000,0x00000000ead80000)
+ ParOldGen       total 53760K, used 9210K [0x0000000081800000, 0x0000000084c80000, 0x00000000d5d80000)
+  object space 53760K, 17% used [0x0000000081800000,0x00000000820fe900,0x0000000084c80000)
+ Metaspace       used 33699K, capacity 35410K, committed 35496K, reserved 1081344K
+  class space    used 4362K, capacity 4655K, committed 4656K, reserved 1048576K
+}
+Event: 10.556 GC heap before
+{Heap before GC invocations=11 (full 2):
+ PSYoungGen      total 236032K, used 11772K [0x00000000d5d80000, 0x00000000ead80000, 0x0000000100000000)
+  eden space 224256K, 0% used [0x00000000d5d80000,0x00000000d5d80000,0x00000000e3880000)
+  from space 11776K, 99% used [0x00000000e3880000,0x00000000e43ff150,0x00000000e4400000)
+  to   space 13312K, 0% used [0x00000000ea080000,0x00000000ea080000,0x00000000ead80000)
+ ParOldGen       total 53760K, used 9210K [0x0000000081800000, 0x0000000084c80000, 0x00000000d5d80000)
+  object space 53760K, 17% used [0x0000000081800000,0x00000000820fe900,0x0000000084c80000)
+ Metaspace       used 33699K, capacity 35410K, committed 35496K, reserved 1081344K
+  class space    used 4362K, capacity 4655K, committed 4656K, reserved 1048576K
+Event: 10.663 GC heap after
+Heap after GC invocations=11 (full 2):
+ PSYoungGen      total 236032K, used 0K [0x00000000d5d80000, 0x00000000ead80000, 0x0000000100000000)
+  eden space 224256K, 0% used [0x00000000d5d80000,0x00000000d5d80000,0x00000000e3880000)
+  from space 11776K, 0% used [0x00000000e3880000,0x00000000e3880000,0x00000000e4400000)
+  to   space 13312K, 0% used [0x00000000ea080000,0x00000000ea080000,0x00000000ead80000)
+ ParOldGen       total 80896K, used 16698K [0x0000000081800000, 0x0000000086700000, 0x00000000d5d80000)
+  object space 80896K, 20% used [0x0000000081800000,0x000000008284eb98,0x0000000086700000)
+ Metaspace       used 33699K, capacity 35410K, committed 35496K, reserved 1081344K
+  class space    used 4362K, capacity 4655K, committed 4656K, reserved 1048576K
+}
+
+Deoptimization events (10 events):
+Event: 10.459 Thread 0x000000001a8fb000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002f4d748 method=sun.nio.cs.UTF_8$Decoder.decode([BII[C)I @ 30
+Event: 10.459 Thread 0x000000001a8fb000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000037eae08 method=java.lang.StringCoding.safeTrim([CILjava/nio/charset/Charset;Z)[C @ 3
+Event: 10.478 Thread 0x000000001a8fb000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000037efc40 method=java.lang.StringCoding.safeTrim([CILjava/nio/charset/Charset;Z)[C @ 3
+Event: 10.488 Thread 0x000000001a8fb000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000034ac064 method=java.lang.StringCoding.safeTrim([CILjava/nio/charset/Charset;Z)[C @ 3
+Event: 10.503 Thread 0x000000001a8fb000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000002f4b750 method=sun.nio.cs.UTF_8$Decoder.decode([BII[C)I @ 30
+Event: 10.514 Thread 0x000000001a8fb000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000003785b34 method=java.lang.Class$MethodArray.matchesNameAndDescriptor(Ljava/lang/reflect/Method;Ljava/lang/reflect/Method;)Z @ 33
+Event: 10.989 Thread 0x000000001a8fb000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x000000000325d168 method=jdk.internal.org.objectweb.asm.Type.getArgumentsAndReturnSizes(Ljava/lang/String;)I @ 41
+Event: 11.333 Thread 0x000000001a8fb000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000036038d0 method=org.springframework.beans.factory.support.AbstractBeanFactory.isTypeMatch(Ljava/lang/String;Lorg/springframework/core/ResolvableType;Z)Z @ 559
+Event: 11.561 Thread 0x000000001a8fb000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x0000000003141000 method=java.util.HashMap.putVal(ILjava/lang/Object;Ljava/lang/Object;ZZ)Ljava/lang/Object; @ 162
+Event: 11.607 Thread 0x000000001a8fb000 Uncommon trap: reason=unstable_if action=reinterpret pc=0x00000000030fafb4 method=java.util.HashMap.resize()[Ljava/util/HashMap$Node; @ 206
+
+Internal exceptions (10 events):
+Event: 8.460 Thread 0x000000001a8fb000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$and$10(Ljava/util/function/Predicate;Ljava/lang/Object;)Z> (0x00000000dd0fd750) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\interpreter\linkvøØ6ky$@
+Event: 10.237 Thread 0x000000001a8fb000 Implicit null exception at 0x0000000003658d13 to 0x000000000365b49d
+Event: 10.698 Thread 0x000000001a8fb000 Exception <a 'java/io/FileNotFoundException'> (0x00000000d5f1bc70) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 10.714 Thread 0x000000001a8fb000 Exception <a 'java/io/FileNotFoundException'> (0x00000000d5f7dda0) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\prims\jni.cpp, line 709]
+Event: 10.770 Thread 0x000000001a8fb000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$static$0(Lio/micrometer/core/instrument/Timer$Builder;)V> (0x00000000d6193c00) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\interpreter\linkR<üıfî%@
+Event: 10.790 Thread 0x000000001a8fb000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$static$0(Ljava/lang/String;)Ljava/lang/String;> (0x00000000d623b450) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\interpreter\linkResolver.cpâáÊˇ°%@
+Event: 10.816 Thread 0x000000001a8fb000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$static$0(Ljava/lang/String;Lio/micrometer/core/instrument/Meter$Type;Ljava/lang/String;)Ljava/lang/String;> (0x00000000d6364760) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jD≥°QpK&@
+Event: 11.147 Thread 0x000000001a8fb000 Exception <a 'java/lang/reflect/InvocationTargetException'> (0x00000000d696bc68) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\vm\runtime\reflection.cpp, line 1080]
+Event: 11.361 Thread 0x000000001a8fb000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$static$0(Lorg/springframework/boot/actuate/endpoint/invoke/OperationParameter;Ljava/lang/Object;)Ljava/lang/Object;> (0x00000000d6d393d8) thrown at [D:\re\workspace\8-2-build-windows-amd64˚ûG{B'@
+Event: 11.630 Thread 0x000000001a8fb000 Exception <a 'java/lang/NoSuchMethodError': java.lang.Object.lambda$andThen$6(Ljava/util/function/Function;Ljava/lang/Object;)Ljava/lang/Object;> (0x00000000d77e42e8) thrown at [D:\re\workspace\8-2-build-windows-amd64-cygwin\jdk8u40\2855\hotspot\src\share\
+
+Events (10 events):
+Event: 11.710 loading class java/util/Collections$2
+Event: 11.710 loading class java/util/Collections$2 done
+Event: 11.710 loading class org/hibernate/validator/internal/engine/constraintvalidation/ConstraintValidatorDescriptor
+Event: 11.710 loading class org/hibernate/validator/internal/engine/constraintvalidation/ConstraintValidatorDescriptor done
+Event: 11.712 loading class javax/validation/constraintvalidation/ValidationTarget
+Event: 11.712 loading class javax/validation/constraintvalidation/ValidationTarget done
+Event: 11.712 loading class org/hibernate/validator/internal/engine/constraintvalidation/ConstraintValidatorDescriptor
+Event: 11.712 loading class org/hibernate/validator/internal/engine/constraintvalidation/ConstraintValidatorDescriptor done
+Event: 11.712 loading class org/hibernate/validator/internal/metadata/core/ConstraintHelper
+Event: 11.712 loading class org/hibernate/validator/internal/metadata/core/ConstraintHelper done
+
+
+Dynamic libraries:
+0x00007ff6bf040000 - 0x00007ff6bf077000 	D:\JDK8_64\bin\java.exe
+0x00007ffdfdde0000 - 0x00007ffdfdfd0000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffdfdb40000 - 0x00007ffdfdbf2000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffdfb5c0000 - 0x00007ffdfb865000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffdfd3f0000 - 0x00007ffdfd493000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffdfbdd0000 - 0x00007ffdfbe6e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffdfd1f0000 - 0x00007ffdfd287000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffdfd500000 - 0x00007ffdfd61f000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffdfdc00000 - 0x00007ffdfdd94000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffdfac80000 - 0x00007ffdfaca1000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffdfda90000 - 0x00007ffdfdab6000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffdfb970000 - 0x00007ffdfbb08000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffdfad40000 - 0x00007ffdfadde000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffdfab80000 - 0x00007ffdfac7a000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffdf0590000 - 0x00007ffdf0814000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.1500_none_9e79be6de462295c\COMCTL32.dll
+0x00007ffdfc7b0000 - 0x00007ffdfcae6000 	C:\WINDOWS\System32\combase.dll
+0x00007ffdfacb0000 - 0x00007ffdfad31000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffdfc570000 - 0x00007ffdfc59e000 	C:\WINDOWS\System32\IMM32.DLL
+0x000000006a060000 - 0x000000006a132000 	D:\JDK8_64\jre\bin\msvcr100.dll
+0x00000000697d0000 - 0x000000006a053000 	D:\JDK8_64\jre\bin\server\jvm.dll
+0x00007ffdfade0000 - 0x00007ffdfae04000 	C:\WINDOWS\System32\WINMM.dll
+0x00007ffdfa9a0000 - 0x00007ffdfa9cd000 	C:\WINDOWS\System32\WINMMBASE.dll
+0x00007ffdfb920000 - 0x00007ffdfb96a000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ffdfcd10000 - 0x00007ffdfcd18000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffdf66d0000 - 0x00007ffdf66d9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffdfdac0000 - 0x00007ffdfdb2f000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffdfa550000 - 0x00007ffdfa55a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x000000006abc0000 - 0x000000006abcf000 	D:\JDK8_64\jre\bin\verify.dll
+0x000000006ab90000 - 0x000000006abb9000 	D:\JDK8_64\jre\bin\java.dll
+0x00000000697a0000 - 0x00000000697c3000 	D:\JDK8_64\jre\bin\instrument.dll
+0x000000006ab70000 - 0x000000006ab86000 	D:\JDK8_64\jre\bin\zip.dll
+0x00007ffdfbe70000 - 0x00007ffdfc558000 	C:\WINDOWS\System32\SHELL32.dll
+0x00007ffdfcc60000 - 0x00007ffdfcd07000 	C:\WINDOWS\System32\shcore.dll
+0x00007ffdfae10000 - 0x00007ffdfb58b000 	C:\WINDOWS\System32\windows.storage.dll
+0x00007ffdfa970000 - 0x00007ffdfa98e000 	C:\WINDOWS\System32\profapi.dll
+0x00007ffdfb8d0000 - 0x00007ffdfb91a000 	C:\WINDOWS\System32\powrprof.dll
+0x00007ffdfa990000 - 0x00007ffdfa9a0000 	C:\WINDOWS\System32\UMPDC.dll
+0x00007ffdfd4a0000 - 0x00007ffdfd4f2000 	C:\WINDOWS\System32\shlwapi.dll
+0x00007ffdfa9d0000 - 0x00007ffdfa9e1000 	C:\WINDOWS\System32\kernel.appcore.dll
+0x00007ffdfbb10000 - 0x00007ffdfbb27000 	C:\WINDOWS\System32\cryptsp.dll
+0x00007ffddbe00000 - 0x00007ffddbe1a000 	D:\IntelliJ IDEA 2017.3.4\bin\breakgen64.dll
+0x000000006ab50000 - 0x000000006ab6a000 	D:\JDK8_64\jre\bin\net.dll
+0x00007ffdfa140000 - 0x00007ffdfa1a7000 	C:\WINDOWS\system32\mswsock.dll
+0x00007ffdf9e50000 - 0x00007ffdf9e8a000 	C:\WINDOWS\SYSTEM32\IPHLPAPI.DLL
+0x00007ffdfdb30000 - 0x00007ffdfdb38000 	C:\WINDOWS\System32\NSI.dll
+0x00007ffdf4250000 - 0x00007ffdf4266000 	C:\WINDOWS\SYSTEM32\dhcpcsvc6.DLL
+0x00007ffdf4170000 - 0x00007ffdf418c000 	C:\WINDOWS\SYSTEM32\dhcpcsvc.DLL
+0x00007ffdf9e90000 - 0x00007ffdf9f5b000 	C:\WINDOWS\SYSTEM32\DNSAPI.dll
+0x000000006a1f0000 - 0x000000006a225000 	C:\Program Files\Bonjour\mdnsNSP.dll
+0x00007ffdf0ee0000 - 0x00007ffdf0eea000 	C:\Windows\System32\rasadhlp.dll
+0x00007ffdf32d0000 - 0x00007ffdf3347000 	C:\WINDOWS\System32\fwpuclnt.dll
+0x00007ffdfb590000 - 0x00007ffdfb5b6000 	C:\WINDOWS\System32\bcrypt.dll
+0x0000000069790000 - 0x000000006979d000 	D:\JDK8_64\jre\bin\management.dll
+0x00007ffdf5430000 - 0x00007ffdf5446000 	C:\WINDOWS\system32\napinsp.dll
+0x00007ffdf5410000 - 0x00007ffdf542a000 	C:\WINDOWS\system32\pnrpnsp.dll
+0x00007ffdf5780000 - 0x00007ffdf579c000 	C:\WINDOWS\system32\NLAapi.dll
+0x00007ffdf67d0000 - 0x00007ffdf67e5000 	C:\WINDOWS\system32\wshbth.dll
+0x00007ffdf33a0000 - 0x00007ffdf33ae000 	C:\WINDOWS\System32\winrnr.dll
+0x0000000069770000 - 0x0000000069781000 	D:\JDK8_64\jre\bin\nio.dll
+0x00007ffdf9cc0000 - 0x00007ffdf9cf3000 	C:\WINDOWS\system32\rsaenh.dll
+0x00007ffdfa860000 - 0x00007ffdfa885000 	C:\WINDOWS\SYSTEM32\USERENV.dll
+0x00007ffdfa310000 - 0x00007ffdfa31c000 	C:\WINDOWS\SYSTEM32\CRYPTBASE.dll
+0x00007ffdf30d0000 - 0x00007ffdf32c4000 	C:\WINDOWS\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -javaagent:D:\IntelliJ IDEA 2017.3.4\lib\idea_rt.jar=59034:D:\IntelliJ IDEA 2017.3.4\bin -Dfile.encoding=UTF-8 
+java_command: com.cry.springcloud.PaymentMain8006
+java_class_path (initial): D:\JDK8_64\jre\lib\charsets.jar;D:\JDK8_64\jre\lib\deploy.jar;D:\JDK8_64\jre\lib\ext\access-bridge-64.jar;D:\JDK8_64\jre\lib\ext\cldrdata.jar;D:\JDK8_64\jre\lib\ext\dnsns.jar;D:\JDK8_64\jre\lib\ext\jaccess.jar;D:\JDK8_64\jre\lib\ext\jfxrt.jar;D:\JDK8_64\jre\lib\ext\localedata.jar;D:\JDK8_64\jre\lib\ext\nashorn.jar;D:\JDK8_64\jre\lib\ext\sunec.jar;D:\JDK8_64\jre\lib\ext\sunjce_provider.jar;D:\JDK8_64\jre\lib\ext\sunmscapi.jar;D:\JDK8_64\jre\lib\ext\sunpkcs11.jar;D:\JDK8_64\jre\lib\ext\zipfs.jar;D:\JDK8_64\jre\lib\javaws.jar;D:\JDK8_64\jre\lib\jce.jar;D:\JDK8_64\jre\lib\jfr.jar;D:\JDK8_64\jre\lib\jfxswt.jar;D:\JDK8_64\jre\lib\jsse.jar;D:\JDK8_64\jre\lib\management-agent.jar;D:\JDK8_64\jre\lib\plugin.jar;D:\JDK8_64\jre\lib\resources.jar;D:\JDK8_64\jre\lib\rt.jar;D:\cloud2021\cloud-provider-payment8006-consul\target\classes;D:\BaiduNetdiskDownload\≤©—ßπ»…¡æ€÷ß∏∂\day01-œÓƒøΩÈ…‹ Nacos Spring Cloud Alibaba\◊ ¡œ\±æµÿ≤÷ø‚\org\springframework\cloud\spring-cloud-starter-consul-discovery\2.2.1.RELEASE\spring-cloud-starter-consul-discovery-2.2.1.RELEASE.jar;D:\BaiduNetdiskDownload\≤©—ßπ»…¡æ€÷ß∏∂\day01-œÓƒøΩÈ…‹ Nacos Spring Cloud Alibaba\◊ ¡œ\±æµÿ≤÷ø‚\org\springframework\cloud\spring-cloud-starter-consul\2.2.1.RELEASE\spring-cloud-starter-consul-2.2.1.RELEASE.jar;D:\BaiduNetdiskDownload\≤©—ßπ»…¡æ€÷ß∏∂\day01-œÓƒøΩÈ…‹ Nacos Spring Cloud Alibaba\◊ ¡œ\±æµÿ≤÷ø‚\org\springframework\cloud\spring-cloud-commons\2.2.1.RELEASE\spring-cloud-commons-2.2.1.RELEASE.jar;D:\BaiduNetdiskDownload\≤©—ßπ»…¡æ€÷ß∏∂\day01-œÓƒøΩÈ…‹ Nacos Spring Cloud Alibaba\◊ ¡œ\±æµÿ≤÷ø‚\org\springframework\security\spring-security-crypto\5.2.1.RELEASE\spring-security-crypto-5.2.1.RELEASE.jar;D:\BaiduNetdiskDownload\≤©—ßπ»…¡æ€÷ß∏∂\day01-œÓƒøΩÈ…‹ Nacos Spring Cloud Alibaba\◊ ¡œ\±æµÿ≤÷ø‚\org\springframework\cloud\spring-cloud-context\2.2.1.RELEASE\spring-cloud-context-2.2.1.RELEASE.jar;D:\BaiduNetdiskDownload\≤©—ßπ»…¡æ€÷ß∏∂\day01-œÓƒøΩÈ…‹ Nacos Spring Cloud Alibaba\◊ ¡œ\±æµÿ≤÷ø‚\org\springfram
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files (x86)\Java\jdk1.5.0_22
+CLASSPATH=.;C:\Program Files (x86)\Java\jdk1.5.0_22\lib;C:\Program Files (x86)\Java\jdk1.5.0_22\lib\tools.jar;
+PATH=d:\app\cry\product\11.2.0\client_2\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Java\jdk1.5.0_22\bin;C:\Program Files (x86)\Java\jdk1.5.0_22\jre\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files (x86)\Subversion\bin;D:\Program Files (x86)\MySQL\MySQL Server 5.5\bin;C:\Program Files\Git\cmd;C:\Users\cry\AppData\Local\Microsoft\WindowsApps;
+USERNAME=cry
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10.0 , 64 bit Build 18362 (10.0.18362.1500)
+
+CPU:total 4 (2 cores per cpu, 2 threads per core) family 6 model 142 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx
+
+Memory: 4k page, physical 8284644k(506824k free), swap 23784516k(1504k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.40-b25) for windows-amd64 JRE (1.8.0_40-b25), built on Feb 10 2015 21:53:57 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Sun Apr 25 17:33:40 2021
+elapsed time: 11 seconds (0d 0h 0m 11s)
+
