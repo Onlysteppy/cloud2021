@@ -1,5 +1,6 @@
-package com.cry.springcloud.service;
+package com.cry.springcloud.service.impl;
 
+import com.cry.springcloud.service.PaymentHystrixService;
 import org.springframework.stereotype.Component;
 
 @Component
